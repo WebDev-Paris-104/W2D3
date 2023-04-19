@@ -188,6 +188,9 @@ const groceryButton = document.getElementById("grocery-list-button")
 console.log(myInput.value)
 
 groceryButton.addEventListener("click", () => {
+	// Do the check
+	// If the value does not match criterions
+	// just return
 	const itemToAdd = myInput.value
 	const liElement = document.createElement("li")
 	liElement.innerText = itemToAdd
@@ -197,8 +200,15 @@ groceryButton.addEventListener("click", () => {
 		const element = event.target
 		element.remove()
 	})
+	// myGroceryList.innerHTML += itemToAdd
 })
 
+// const list = `
+// <li>Vege Poke-Bowl</li>
+// <li>Tomatoes</li>
+// <div style="height: 100vh">Surprise!</div>
+// `
+// myGroceryList.innerHTML = list
 /**
  * Let's now talk about events
  * We're going to create:
@@ -206,4 +216,45 @@ groceryButton.addEventListener("click", () => {
  * going to be appended.
  * - A shopping list.
  * -A random idea?
+ *
+ * Available events:
+ * - click
+ * - dblclick
+ * - mouseenter
+ * - mouseleave
+ * - focus
+ * - blur // opposite of focus
+ * - keydown
+ * - keyup
+ * - input
  */
+
+const exercisesTitle = document.querySelector("h2.exercises")
+
+exercisesTitle.addEventListener("mouseenter", modifyTheTitle)
+exercisesTitle.addEventListener("mouseleave", resetTheTitle)
+
+function resetTheTitle(event) {
+	const element = event.target
+	element.classList.remove("hovering")
+	element.innerText = "Not hovering anymore"
+}
+function modifyTheTitle(event) {
+	const element = event.target
+	element.innerText = "We are hovering the title !"
+	element.classList.add("hovering")
+}
+
+let i = 0
+
+function call() {
+	// Base condition in recursion
+	if (i > 10000) {
+		return
+	}
+	i++
+	console.log(i)
+	call()
+}
+
+call()

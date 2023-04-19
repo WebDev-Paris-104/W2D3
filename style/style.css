@@ -24,3 +24,15 @@ p {
 	flex-wrap: wrap;
 	gap: 2rem;
 }
+
+input:focus {
+	outline-color: red;
+}
+h2 {
+	transition: all 300ms ease-in-out;
+}
+
+.hovering {
+	color: dodgerblue;
+	font-size: 4rem;
+}
