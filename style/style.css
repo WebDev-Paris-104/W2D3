@@ -1,0 +1,26 @@
+h1 {
+	color: red;
+}
+
+p {
+	text-transform: uppercase;
+}
+
+.make-it-awesome {
+	background-color: black;
+	color: dodgerblue;
+	font-family: sans-serif;
+	text-transform: lowercase;
+	font-weight: 700;
+	letter-spacing: 0.1rem;
+}
+
+.hidden {
+	display: none;
+}
+
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2rem;
+}
